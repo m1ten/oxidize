@@ -1,0 +1,20 @@
+[package]
+name = "oxidize"
+version = "0.1.0"
+authors = ["miten"]
+edition = "2018"
+description = "one of the many build systems"
+readme = "README.md"
+repository = "https://github.com/m1ten/oxidize"
+license = "zlib"
+exclude = ["src/exclude.rs"]
+publish = false
+maintenance = { status = "experimental" }
+
+[dependencies]
+clap = "2.33.3"
+curl = "0.4.36"
+serde = { version = "1.0.125", features = ["derive"] }
+toml = "0.5.8"
+serde_json = { version = "1.0.64", optional = true }
+serde_yaml = { version = "0.8.17", optional = true }
