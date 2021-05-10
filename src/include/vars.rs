@@ -47,5 +47,6 @@ enum VectorOrString {
 
 pub const NAME: &str = "oxidize";
 pub const VERSION: &str = "0.1.0";
-pub const AUTHOR: &str = "miten";
-pub const COMPILE_FILE: &str = "";
+pub const AUTHOR: &str = "miten"; 
+// pub static mut CONFIG_FILE: &str = "";
+// pub static mut COMPILE_FILE: &str = "";

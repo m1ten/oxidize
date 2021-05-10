@@ -1,7 +1,11 @@
 use crate::include::vars;
 use clap::{App, Arg};
 
-pub fn run() -> Vec<String> {
+pub fn run(custom: bool) -> Vec<String> {
+      if !custom {
+            return std::env::args().collect()
+      }
+
       // create custom args
       let matches = App::new(vars::NAME)
             .version(vars::VERSION)
@@ -29,7 +33,7 @@ pub fn run() -> Vec<String> {
 
       // return custom args
       let mut matches_data: Vec<String> = Vec::new();
-      /* 0 */ matches_data.push(String::from(matches.value_of("file").unwrap_or(vars::COMPILE_FILE)));
+      /* 0 */ matches_data.push(String::from(matches.value_of("file").unwrap_or("")));
       /* 1 */ matches_data.push(String::from(matches.value_of("option").unwrap_or_default()));
 
       /* 2 */
